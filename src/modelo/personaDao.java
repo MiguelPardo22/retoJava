@@ -34,7 +34,7 @@ public class personaDao {
 
     public int crear(persona p) {
 
-        String sql = "insert into persona(num_doc, nombre, apellidos, mail) values(?,?,?,?)";
+        String sql = "insert into persona(num_doc, nombres, apellidos, mail) values(?,?,?,?)";
 
         try {
             con = conectar.conectar();
@@ -52,7 +52,7 @@ public class personaDao {
 
     public int actualizar(persona p) {
         int r=0;
-        String sql = "update persona set num_doc = ?, nombre = ?, apellidos = ?, mail = ? where num_doc = ?";
+        String sql = "update persona set num_doc = ?, nombres = ?, apellidos = ?, mail = ? where num_doc = ?";
 
         try {
             con = conectar.conectar();
